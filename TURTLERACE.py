@@ -7,53 +7,52 @@ import random
 s =  turtle.Screen()
 s.bgcolor("black")
 
-nigga = turtle.Turtle() #baptisia
+t1 = turtle.Turtle() #baptisia
 
-nigger = turtle.Turtle()
+t2 = turtle.Turtle()
 
 ref = turtle.Turtle()
 
-nigga.pencolor("green")
+t1.pencolor("green")
 
-nigga.fillcolor("green")
+t1.fillcolor("green")
 
-nigger.pencolor("yellow")
+t2.pencolor("yellow")
 
-nigger.fillcolor("yellow")
+t2.fillcolor("yellow")
 
 
-nigga.pu()
+t1.pu()
 
-nigger.pu()
-nigga.goto(-200,100)
-nigger.goto(-200,-100)
-while nigga.pos() < (300,100) and nigger.pos() < (300,-100):
+t2.pu()
+t1.goto(-200,100)
+t2.goto(-200,-100)
+while t1.pos() < (300,100) and t2.pos() < (300,-100):
  n = random.randint(0, 6)
- nigga.fd(n)
+ t1.fd(n)
  n = random.randint(0, 6)
- nigger.fd(n)
+ t2.fd(n)
 
-if nigga.pos() > (300,100):
+if t1.pos() > (300,100):
     print("green won")
     ref.pencolor("green")
     ref.write("Green wins", move = True, font=("Arial",20,"bold"))
     ref.color("black")
-elif nigger.pos() > (300,100):
+elif t2.pos() > (300,100):
     print("yellow won")
     ref.pencolor("yellow")
     ref.write("Yellow won", move = True, font=("Arial",20,"bold"))
     ref.color("black")
 
-nigga.pd()
-nigger.pd()
-nigga.rt(90)
-nigga.fd(200)
-nigger.lt(90)
-nigger.fd(200)
+t1.pd()
+t2.pd()
+t1.rt(90)
+t1.fd(200)
+t2.lt(90)
+t2.fd(200)
 
 
 turtle.done()
-
 
 
 
